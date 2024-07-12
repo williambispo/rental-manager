@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "rental.WebAPI", "src\rental.WebAPI\rental.WebAPI.csproj", "{440FC9F1-173D-48C4-8DEE-B1F4E68CC48F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{367FF1C0-1559-4A5C-9B1F-FFC6D61BB8E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +20,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{440FC9F1-173D-48C4-8DEE-B1F4E68CC48F} = {367FF1C0-1559-4A5C-9B1F-FFC6D61BB8E1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2200F68B-AD8D-4DE1-B262-55BE5498A612}

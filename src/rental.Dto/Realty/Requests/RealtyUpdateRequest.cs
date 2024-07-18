@@ -1,13 +1,15 @@
-﻿using System;
+﻿using rental.Dto.Address.Requests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace rental.Domain.Entities;
+namespace rental.Dto.Realty.Requests;
 
-public class Realty : BaseEntity
+public class RealtyUpdateRequest
 {
+    public Guid Id { get; set; }
     public decimal Price { get; set; }
     public short NumberRooms { get; set; }
     public short NumberSuites { get; set; }
@@ -15,5 +17,5 @@ public class Realty : BaseEntity
     public bool GarageSpace { get; set; }
     public bool Status { get; set; }
 
-    public Address Address { get; set; } = new Address();
+    public AddressUpdateRequest AddressUpdateRequest { get; set; } = new AddressUpdateRequest();
 }

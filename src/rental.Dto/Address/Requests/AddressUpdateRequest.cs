@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace rental.Domain.Entities;
+namespace rental.Dto.Address.Requests;
 
-public class Adress : BaseEntity
+public class AddressUpdateRequest
 {
-    public short StateId { get; set; }
+    public Guid Id { get; set; }
+    public string State { get; set; }
     public string CityId { get; set; }
     public string Description { get; set; }
     public string Complement { get; set; }

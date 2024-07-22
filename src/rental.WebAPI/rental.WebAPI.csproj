@@ -18,4 +18,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\rental.Domain\rental.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

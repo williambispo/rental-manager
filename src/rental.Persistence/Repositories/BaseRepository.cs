@@ -14,7 +14,12 @@ public abstract class BaseRepository<T, TContext> : IBaseRepository<T> where T :
 
     public async Task<List<T>> ListAsync()
     {
-        return await context.Set<T>().AsNoTracking().ToListAsync();
+        var list = await context.Set<T>().AsNoTracking().ToListAsync();
+
+        if (list is null)
+            return new List<T>();
+
+        return list;
     }
 
     public async Task<T?> GetById(int id)

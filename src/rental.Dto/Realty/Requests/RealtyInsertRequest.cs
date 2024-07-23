@@ -1,4 +1,5 @@
 ﻿using rental.Dto.Address.Requests;
+using rental.Dto.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace rental.Dto.Realty.Requests;
 
-public class RealtyInsertRequest
+public class RealtyInsertRequest : BaseRequest
 {
     public decimal Price { get; set; }
     public short NumberRooms { get; set; }

@@ -1,4 +1,5 @@
 ﻿using rental.Dto.Address.Responses;
+using rental.Dto.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace rental.Dto.Realty.Responses;
 
-public class RealtyResponse
+public class RealtyResponse : BaseResponse
 {
     public Guid Id { get; set; }
     public decimal Price { get; set; }

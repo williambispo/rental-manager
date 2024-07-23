@@ -1,4 +1,10 @@
+using rental.Domain.Interfaces.Repositories;
 using rental.Domain.Mappers;
+using rental.Domain.Services.Realty.Interface;
+using rental.Domain.Services.Realty;
+using rental.Persistence.Repositories;
+using Microsoft.EntityFrameworkCore;
+using rental.Persistence.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +15,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<DbContext, RentalContext>();
 builder.Services.AddAutoMapper(typeof(RentalProfile).Assembly);
+
+builder.Services.AddScoped<IRealtyService, RealtyService>();
+builder.Services.AddScoped<IRealtyRepository, RealtyRepository>();
 
 var app = builder.Build();
 

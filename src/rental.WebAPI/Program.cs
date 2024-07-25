@@ -15,6 +15,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<RentalContext>();
 builder.Services.AddScoped<DbContext, RentalContext>();
 builder.Services.AddAutoMapper(typeof(RentalProfile).Assembly);
 

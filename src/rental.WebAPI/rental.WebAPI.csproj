@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\rental.Domain\rental.Domain.csproj" />
     <ProjectReference Include="..\rental.Persistence\rental.Persistence.csproj" />
   </ItemGroup>

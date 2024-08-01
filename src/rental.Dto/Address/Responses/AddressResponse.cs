@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace rental.Dto.Address.Responses;
+﻿namespace rental.Dto.Address.Responses;
 
 public class AddressResponse
 {

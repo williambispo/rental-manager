@@ -53,7 +53,7 @@ app.MapGet("/login", (string username) =>
 
 app.MapGet("/user", (ClaimsPrincipal user) =>
 {
-    return Results.Ok($"Bem-Vindo {user.Identity.Name}!");
+    return Results.Ok($"Bem-Vindo {user.Identity?.Name}!");
 })
 .RequireAuthorization();
 

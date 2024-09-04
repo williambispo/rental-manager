@@ -22,8 +22,12 @@ builder.Services
         .AddBearerToken();
 builder.Services.AddAuthorization();
 
-builder.Services.AddDbContext<RentalContext>();
-builder.Services.AddScoped<DbContext, RentalContext>();
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<RentalDbContext>(options =>
+    options.UseNpgsql(connectionString));
+
+builder.Services.AddDbContext<RentalDbContext>();
+builder.Services.AddScoped<DbContext, RentalDbContext>();
 builder.Services.AddAutoMapper(typeof(RentalProfile).Assembly);
 
 builder.Services.AddScoped<IRealtyService, RealtyService>();
